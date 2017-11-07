@@ -1,16 +1,5 @@
 import createREGL from 'regl';
-
-export function quad(left, right, top, bottom) {
-  return [
-    [left, bottom],
-    [right, bottom],
-    [right, top],
-
-    [right, top],
-    [left, bottom,],
-    [left, top],
-  ];
-}
+import{ quad } from './utils';
 
 function createRenderer(regl, dimensions) {
   const a_pos = quad(-1, 1, -1, 1);
@@ -33,20 +22,7 @@ function createRenderer(regl, dimensions) {
       u_res: dimensions,
     },
     count: a_pos.length,
-    // blend: {
-    //   enable: true,
-    //   func: {
-    //     srcRGB: 'src alpha',
-    //     srcAlpha: 1,
-    //     dstRGB: 'one minus src alpha',
-    //     dstAlpha: 1
-    //   },
-    //   equation: {
-    //     rgb: 'add',
-    //     alpha: 'add'
-    //   },
-    // },
-    // depth: { enable: false }
+    depth: { enable: false }
   });
 }
 
