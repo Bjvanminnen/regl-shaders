@@ -20,6 +20,7 @@ function createRenderer(regl, dimensions) {
     },
     uniforms: {
       u_res: dimensions,
+      u_time: regl.prop('time')
     },
     count: a_pos.length,
     depth: { enable: false }
@@ -38,5 +39,9 @@ export default function run(canvas) {
   const height = parseInt(canvas.getAttribute('height'), 10);
   const renderer = createRenderer(regl, [width, height]);
 
-  renderer();
+  regl.frame(({time}) => {
+    renderer({
+      time
+    });
+  });
 }
