@@ -2,6 +2,7 @@ precision highp float;
 
 uniform vec2 u_res;
 uniform float u_time;
+uniform sampler2D u_sound;
 
 #pragma glslify: fbm = require(../lib/morganNoise.glsl)
 

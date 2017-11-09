@@ -6430,6 +6430,10 @@ wbuf@^1.1.0, wbuf@^1.7.2:
   dependencies:
     minimalistic-assert "^1.0.0"
 
+"web-audio-utils@https://github.com/Bjvanminnen/web-audio-utils":
+  version "1.1.0"
+  resolved "https://github.com/Bjvanminnen/web-audio-utils#902e631079dd0ec40a4f5456e014c00ee0562893"
+
 webidl-conversions@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"

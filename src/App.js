@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import run from './run';
+import { loadBuffer } from 'web-audio-utils';
 
 class App extends Component {
   state = {
@@ -8,7 +9,12 @@ class App extends Component {
   };
 
   componentDidMount() {
-    run(this.canvas);
+
+
+    loadBuffer('/andata.mp3')
+    .then(buffer => {
+      run(this.canvas, buffer);
+    });
   }
 
   render() {
